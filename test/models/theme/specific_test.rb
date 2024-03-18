@@ -1,13 +1,12 @@
 # magic_ball.rb
 require 'minitest/autorun'
 
-class MagicBallTest < Minitest::Test
-  def test_ask_returns_an_answer
-    record = Theme::Specific.new
-
-    record.menu_variant = "border"
-
-    record.save!
+class ThemeSpecificTest < Minitest::Test
+  def test_creation
+    record = Theme::Specific
+      .new
+      .tap { _1.menu_variant = "border" }
+      .tap(&:save!)
 
     assert_equal record.reload.menu_variant, "border"
   end
