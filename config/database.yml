@@ -1,0 +1,17 @@
+default: &default
+  adapter: postgresql
+  encoding: unicode
+
+development:
+  adapter: postgresql
+  encoding: unicode
+  database: enumirizemre_development
+  username: postgres
+  password: postgres
+
+test:
+  adapter: postgresql
+  encoding: unicode
+  username: postgres
+  password: postgres
+  database: enumirizemre_test
