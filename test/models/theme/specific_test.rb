@@ -8,6 +8,6 @@ class ThemeSpecificTest < Minitest::Test
       .tap { _1.menu_variant = "border" }
       .tap(&:save!)
 
-    assert_equal record.reload.menu_variant, "border"
+    assert_equal "border", record.reload.menu_variant
   end
 end
